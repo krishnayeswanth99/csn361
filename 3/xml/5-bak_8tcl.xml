@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="5-bak_8tcl" kind="file" language="Tcl">
+    <compoundname>5-bak.tcl</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="5-bak_8tcl_1a30728837c246b65ef76298af0101d99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>finish</definition>
+        <argsstring></argsstring>
+        <name>finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/krishna/Documents/csn361/3/5-bak.tcl" line="12" column="1" bodyfile="/home/krishna/Documents/csn361/3/5-bak.tcl" bodystart="12" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="keyword">set</highlight><highlight class="normal"><sp/>ns<sp/>[new<sp/>Simulator]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$ns<sp/>color<sp/>0<sp/>Red</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>1<sp/>Blue</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>2<sp/>Azure</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>3<sp/>Coral</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>4<sp/>Cyan</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>f<sp/>[open<sp/>5.nam<sp/>w]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>namtrace-all<sp/>$f</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">proc</highlight><highlight class="normal"><sp/>finish<sp/>{}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>ns<sp/>f</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>flush-trace</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">close</highlight><highlight class="normal"><sp/>$f</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">exec</highlight><highlight class="normal"><sp/>nam<sp/>5.nam<sp/>&amp;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">exit</highlight><highlight class="normal"><sp/>0</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">puts</highlight><highlight class="normal"><sp/>&quot;Enter<sp/>no.<sp/>of<sp/>Nodes:<sp/>&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin<sp/>N</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>n(0)<sp/>[$ns<sp/>node]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>y<sp/>&quot;$n(0)&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="comment">#<sp/>set<sp/>lan0<sp/>[$ns<sp/>newLan<sp/>&quot;$n(0)&quot;<sp/>1Mb<sp/>10ms<sp/>LL<sp/>Queue/FQ<sp/>MAC/Csma/Cd<sp/>Channel]</highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>1}<sp/>{$i<sp/>&lt;<sp/>$N}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>n($i)<sp/>[$ns<sp/>node]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>$ns<sp/>duplex-link<sp/>$n($i)<sp/>$n(0)<sp/>1Mb<sp/>10ms<sp/>DropTail</highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">append</highlight><highlight class="normal"><sp/>y<sp/>&quot;<sp/>&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">append</highlight><highlight class="normal"><sp/>y<sp/>&quot;$n($i)&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>set<sp/>lan<sp/>[eval<sp/>new<sp/>LanNode<sp/>$self<sp/>-bw<sp/>1Mb<sp/>-delay<sp/>10ms<sp/>LL<sp/>Queue/FQ<sp/>MAC/Csma/Cd<sp/>Channel]</highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>$lan0<sp/>addNode<sp/>&quot;$n($i)&quot;<sp/>1Mb<sp/>10ms</highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">puts</highlight><highlight class="normal"><sp/>$y</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">puts</highlight><highlight class="normal"><sp/>&quot;$n(0)<sp/>$n(1)&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>lan0<sp/>[$ns<sp/>newLan<sp/>$y<sp/>1Mb<sp/>10ms<sp/>LL<sp/>Queue/DropTail<sp/>MAC/Csma/Cd<sp/>Channel]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">puts</highlight><highlight class="normal"><sp/>&quot;Enter<sp/>k:<sp/>&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin<sp/>k</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>0}<sp/>{$i<sp/>&lt;<sp/>$k}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin<sp/>i1</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin<sp/>i2</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>tcp<sp/>[new<sp/>Agent/TCP]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$tcp<sp/>set<sp/>class_<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>$i%5]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>attach-agent<sp/>$n($i1)<sp/>$tcp</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>sink<sp/>[new<sp/>Agent/TCPSink]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>attach-agent<sp/>$n($i2)<sp/>$sink</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>connect<sp/>$tcp<sp/>$sink</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$tcp<sp/>set<sp/>fid_<sp/>$i</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>ftp($i)<sp/>[new<sp/>Application/FTP]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ftp($i)<sp/>attach-agent<sp/>$tcp</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ftp($i)<sp/>set<sp/>type_<sp/>FTP</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>0}<sp/>{$i<sp/>&lt;<sp/>$k}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>at<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>($i/10)+0.1]<sp/>&quot;$ftp($i)<sp/>start&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>at<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>($i/10)+1.5]<sp/>&quot;$ftp($i)<sp/>stop&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>at<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>($k/10)+1.5]<sp/>&quot;finish&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$ns<sp/>run</highlight></codeline>
+    </programlisting>
+    <location file="/home/krishna/Documents/csn361/3/5-bak.tcl"/>
+  </compounddef>
+</doxygen>

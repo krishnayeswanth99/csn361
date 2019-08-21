@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_ee76fc5d63b5f115dc8ed22e640a8436" kind="dir">
+    <compoundname>/home/krishna/Documents/csn361/3</compoundname>
+    <innerfile refid="1_8c">1.c</innerfile>
+    <innerfile refid="2__cli_8c">2_cli.c</innerfile>
+    <innerfile refid="2__ser_8c">2_ser.c</innerfile>
+    <innerfile refid="3_8tcl">3.tcl</innerfile>
+    <innerfile refid="4_8tcl">4.tcl</innerfile>
+    <innerfile refid="5-bak_8tcl">5-bak.tcl</innerfile>
+    <innerfile refid="5_8tcl">5.tcl</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/krishna/Documents/csn361/3/"/>
+  </compounddef>
+</doxygen>

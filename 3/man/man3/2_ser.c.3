@@ -1,0 +1,99 @@
+.TH "/home/krishna/Documents/csn361/3/2_ser.c" 3 "Thu Aug 22 2019" "3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/krishna/Documents/csn361/3/2_ser.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <netinet/in\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBsendrecvflag\fP   0"
+.br
+.ti -1c
+.RI "#define \fBnofile\fP   'File Not Found!'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclearBuf\fP (char *b)"
+.br
+.ti -1c
+.RI "int \fBsendFile\fP (FILE *fp, char *buf, int s)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define nofile   'File Not Found!'"
+
+.SS "#define sendrecvflag   0"
+
+.SH "Function Documentation"
+.PP 
+.SS "void clearBuf (char * b)"
+This method will be used to clear Buffer\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Krishna Yeswanth 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP pointer 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+8/22/2019 
+.RE
+.PP
+
+.SS "int main ()"
+
+.SS "int sendFile (FILE * fp, char * buf, int s)"
+This method will be used to get file into buffer\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Krishna Yeswanth 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP pointer, buffer pointer and size 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+8/22/2019 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for 3 from the source code\&.
